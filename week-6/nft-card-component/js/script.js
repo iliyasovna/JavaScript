@@ -16,3 +16,16 @@ wrapper.style.justifyContent = "space-around";
 wrapper.style.flexWrap = "wrap";
 wrapper.style.marginTop = "100px";
 
+// Card
+function createCard() {
+    const card = document.createElement("div");
+    
+
+
+    document.body.appendChild(wrapper);
+
+}
+
+createCard();
+
+
