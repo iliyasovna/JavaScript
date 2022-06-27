@@ -89,7 +89,7 @@ function createCard() {
     imgInfo.className = "img-info";
     imgInfo.style.display = "flex";
     // imgInfo.style.justifyContent = "center";
-    // imgInfo.style.gap = "111px";
+    imgInfo.style.gap = "7px";
 
     // img-info-icon
     const imgIcon = document.createElement("img");
@@ -108,8 +108,34 @@ function createCard() {
     imgInfoText.style.fontWeight = "600";
     imgInfoText.style.fontSize = "16px";
     imgInfoText.style.color = "hsl(178, 100%, 50%)";
-    imgInfoText.style.marginLeft = "7px";
+    // imgInfoText.style.marginLeft = "7px";
 
+
+    // img-time-icon
+    const imgTimeIcon = document.createElement("img");
+    imgTimeIcon.className = "time-icon";
+    imgTimeIcon.src = "/images/icon-clock.svg";
+    imgTimeIcon.style.height = "17px"
+    imgTimeIcon.style.marginLeft = "104px";
+    imgTimeIcon.style.marginBottom = "20px";
+
+
+    // img-time-text
+    const imgTimeText = document.createElement("p");
+    imgTimeText.className = "img-time-text";
+    imgTimeText.innerText = "3 days left";
+    imgTimeText.style.margin = "0";
+    imgTimeText.style.fontFamily = "Outfit";
+    imgTimeText.style.fontStyle = "normal";
+    imgTimeText.style.fontWeight = "400";
+    imgTimeText.style.fontSize = "16px";
+    imgTimeText.style.color = "hsl(215, 51%, 70%)";
+
+    // line
+    const line = document.createElement("hr");
+    line.className = "line";
+    line.style.width = "302px";
+    line.style.border = "1px solid hsl(215, 32%, 27%)";
 
 
 
@@ -122,10 +148,13 @@ function createCard() {
     card.appendChild(imgInfo);
     imgInfo.appendChild(imgIcon);
     imgInfo.appendChild(imgInfoText);
+    imgInfo.appendChild(imgTimeIcon);
+    imgInfo.appendChild(imgTimeText);
+    card.appendChild(line);
 
 
 }
 
 createCard();
-
+// let alert(“Я оцениваю свою работу на 100 баллов”);
 
