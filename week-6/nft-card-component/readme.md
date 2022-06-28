@@ -1,2 +1,2 @@
 depleyed link
-https://iliyasovna.github.io/JavaScript/
+https://iliyasovna.github.io/NFT-card-component/
