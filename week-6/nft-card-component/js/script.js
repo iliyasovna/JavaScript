@@ -1,3 +1,6 @@
+// const alert (`“Я оцениваю свою работу на 100 баллов”`);
+// document.write(alert);
+
 const body = document.querySelector("body");
 body.style.background = 'hsl(217, 54%, 11%)'
 body.style.width = "100%";
@@ -13,7 +16,8 @@ wrapper.style.boxSizing = "border-box";
 wrapper.style.margin = "0, auto";
 wrapper.style.width = "1440";
 wrapper.style.display = "flex";
-wrapper.style.justifyContent = "center";
+wrapper.style.flexDirection = "row";
+wrapper.style.justifyContent = "space-around";
 wrapper.style.alignItems = "center";
 wrapper.style.marginTop = "150px";
 
@@ -32,12 +36,6 @@ function createCard() {
     const card = document.createElement("div");
     card.className = "card";
     card.style.position = "relative";
-    // card.style.display = "flex";
-    // card.style.flexWrap = "wrap";
-    // card.style.direction = "column";
-    // card.style.justifyContent = "center";
-    // card.style.alignItems = "center";
-    // card.style.boxSizing = "border-Box";
     card.style.width = "350px";
     card.style.height = "600px";
     // card.style.padding = "0";
@@ -51,9 +49,6 @@ function createCard() {
     const cardIMg = document.createElement("img");
     cardIMg.className = "card-img";
     cardIMg.setAttribute('src', 'images/image-equilibrium.jpg');
-    // cardIMg.src = 'images/image-equilibrium.jpg';
-    // cardIMg.style.display = "flex";
-    // cardIMg.style.alignItems = "flex-start";
     cardIMg.style.width = "302px";
     cardIMg.style.height = "302px";
     cardIMg.style.borderRadius = "10px";
@@ -84,7 +79,7 @@ function createCard() {
     subtitle.style.marginLeft = "24px";
     subtitle.style.marginBottom = "24px";
     
-    // img-info-flex
+    // img-info-div
     const imgInfo = document.createElement("div");
     imgInfo.className = "img-info";
     imgInfo.style.display = "flex";
@@ -137,6 +132,41 @@ function createCard() {
     line.style.width = "302px";
     line.style.border = "1px solid hsl(215, 32%, 27%)";
 
+    // img-author-div
+    const imgAuthor = document.createElement("div");
+    imgAuthor.className = "img-author";
+    imgAuthor.style.display = "flex";
+    imgAuthor.style.alignItems = "center";
+    imgAuthor.style.gap = "17px";
+
+    // avatar-author
+    const photoAuthor = document.createElement("img");
+    photoAuthor.className = "photoAuthor";
+    photoAuthor.src = "/images/image-avatar.png";
+    photoAuthor.style.width = "34px";
+    photoAuthor.style.height = "34px";
+    photoAuthor.style.marginLeft = "24px";
+    photoAuthor.style.border = "1px solid hsl(0, 0%, 100%)";
+    photoAuthor.style.borderRadius = "50px";
+
+    // avatar-text
+    const avatarText = document.createElement("p");
+    avatarText.className = "avatar-text";
+    avatarText.innerText = "Creation of";
+    avatarText.style.fontStyle = "normal";
+    avatarText.style.fontWeight = "400";
+    avatarText.style.fontSize = "16px";
+    avatarText.style.color = "hsl(215, 51%, 70%)";
+
+    // avatar-text-span
+    const avatarTextSpan = document.createElement("span");
+    avatarTextSpan.className = "avatar-text-span";
+    avatarTextSpan.innerText = "     Jules Wyvern";
+    avatarTextSpan.style.fontWeight = "600";
+    avatarTextSpan.style.fontSize = "16px";
+    avatarTextSpan.style.color = "hsl(0, 0%, 100%)";
+    avatarTextSpan.margin = "0";
+   
 
 
     document.body.appendChild(wrapper);
@@ -151,10 +181,12 @@ function createCard() {
     imgInfo.appendChild(imgTimeIcon);
     imgInfo.appendChild(imgTimeText);
     card.appendChild(line);
-
-
+    card.appendChild(imgAuthor);
+    imgAuthor.appendChild(photoAuthor);
+    imgAuthor.appendChild(avatarText);
+    avatarText.appendChild(avatarTextSpan);
 }
 
 createCard();
-// let alert(“Я оцениваю свою работу на 100 баллов”);
+
 
